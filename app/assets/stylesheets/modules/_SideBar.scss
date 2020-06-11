@@ -1,0 +1,50 @@
+.SideBar{
+  width: 300px;
+  background-color: #253141;
+  .UserName{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__TopItems{
+      width: 260px;
+      height: 20px;
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        color: $side-font-color;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__Icons{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        &__icon{
+          margin-left: 5px;
+          & a{
+            color: $side-font-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .GroupList{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    overflow: scroll;
+    &__Group{
+      padding: 20px 20px 40px;
+      &__name{
+        font-size: 15px;
+        color: $side-font-color;
+        margin-bottom: 5px;
+      }
+      &__message{
+        font-size: 11px;
+        color: $side-font-color;
+      }
+    }
+  }
+}
