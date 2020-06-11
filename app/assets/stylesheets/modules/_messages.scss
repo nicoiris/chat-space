@@ -15,7 +15,7 @@
       margin-top: 35px;
       &__name{
         font-size: 20px;
-        color: #333333;
+        color: $main-name-color;
         margin-bottom: 15px;
       }
       &__member{
@@ -29,8 +29,8 @@
       height: 40px;
       padding: 0 20px;
       line-height: 40px;
-      border: 1px solid #38aef0;
-      color: #38aef0;
+      border: 1px solid $main-button-color;
+      color: $main-button-color;
       text-decoration: none;
     }
   }
@@ -45,7 +45,7 @@
         margin-bottom: 12px;
         &__name{
           font-weight: bold;
-          color: #333333;
+          color: $main-name-color;
         }
         &__date{
           font-size: 12px;
@@ -55,7 +55,7 @@
       }
       &__message{
         font-size: 14px;
-        color: #434A54;
+        color: $main-message-color;
       }
     }
   }
@@ -91,7 +91,7 @@
         height: 50px;
         margin-left: 15px;
         padding: 0 30px;
-        background-color: #38AEF0;
+        background-color: $main-button-color;
         color: #fff;
       }
     }
@@ -111,7 +111,7 @@
       display: flex;
       justify-content: space-between;
       &__name{
-        color: #fff;
+        color: $side-font-color;
         font-size: 16px;
         font-weight: bold;
       }
@@ -122,7 +122,7 @@
         &__icon{
           margin-left: 5px;
           & a{
-            color: #fff;
+            color: $side-font-color;
             text-decoration: none;
           }
         }
@@ -137,12 +137,12 @@
       padding: 20px 20px 40px;
       &__name{
         font-size: 15px;
-        color: #fff;
+        color: $side-font-color;
         margin-bottom: 5px;
       }
       &__message{
         font-size: 11px;
-        color: #fff;
+        color: $side-font-color;
       }
     }
   }
