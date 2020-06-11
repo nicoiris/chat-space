@@ -1,50 +1,50 @@
 .ChatMain
-  .ChatMain__GroupInfo
-    .ChatMain__GroupInfo__Group
-      .ChatMain__GroupInfo__Group__name
+  .GroupInfo
+    .GroupInfo__Group
+      .GroupInfo__Group__name
         %p グループ名
-      .ChatMain__GroupInfo__Group__member
+      .GroupInfo__Group__member
         %p Member :
-    %a.ChatMain__GroupInfo__button{href: "#"}
+    %a.GroupInfo__button{href: "#"}
       Edit
-  .ChatMain__MessageList
-    .ChatMain__MessageList__MessageBox
-      .ChatMain__MessageList__MessageBox__MessageInfo
-        .ChatMain__MessageList__MessageBox__MessageInfo__name
+  .MessageList
+    .MessageList__MessageBox
+      .MessageList__MessageBox__MessageInfo
+        .MessageList__MessageBox__MessageInfo__name
           %p ユーザー名
-        .ChatMain__MessageList__MessageBox__MessageInfo__date
+        .MessageList__MessageBox__MessageInfo__date
           %p 2020年06月04日 20時30分
-      .ChatMain__MessageList__MessageBox__message
+      .MessageList__MessageBox__message
         %p ここにメッセージが入ります
-    .ChatMain__MessageList__MessageBox
-      .ChatMain__MessageList__MessageBox__MessageInfo
-        .ChatMain__MessageList__MessageBox__MessageInfo__name
+    .MessageList__MessageBox
+      .MessageList__MessageBox__MessageInfo
+        .MessageList__MessageBox__MessageInfo__name
           %p ユーザー名
-        .ChatMain__MessageList__MessageBox__MessageInfo__date
+        .MessageList__MessageBox__MessageInfo__date
           %p 2020年06月04日 20時30分
-      .ChatMain__MessageList__MessageBox__message
+      .MessageList__MessageBox__message
         %p ここにメッセージが入ります
-    .ChatMain__MessageList__MessageBox
-      .ChatMain__MessageList__MessageBox__MessageInfo
-        .ChatMain__MessageList__MessageBox__MessageInfo__name
+    .MessageList__MessageBox
+      .MessageList__MessageBox__MessageInfo
+        .MessageList__MessageBox__MessageInfo__name
           %p ユーザー名
-        .ChatMain__MessageList__MessageBox__MessageInfo__date
+        .MessageList__MessageBox__MessageInfo__date
           %p 2020年06月04日 20時30分
-      .ChatMain__MessageList__MessageBox__message
+      .MessageList__MessageBox__message
         %p ここにメッセージが入ります
-    .ChatMain__MessageList__MessageBox
-      .ChatMain__MessageList__MessageBox__MessageInfo
-        .ChatMain__MessageList__MessageBox__MessageInfo__name
+    .MessageList__MessageBox
+      .MessageList__MessageBox__MessageInfo
+        .MessageList__MessageBox__MessageInfo__name
           %p ユーザー名
-        .ChatMain__MessageList__MessageBox__MessageInfo__date
+        .MessageList__MessageBox__MessageInfo__date
           %p 2020年06月04日 20時30分
-      .ChatMain__MessageList__MessageBox__message
+      .MessageList__MessageBox__message
         %p ここにメッセージが入ります
-  .ChatMain__MessageForm
-    %form.ChatMain__MessageForm__Form
-      .ChatMain__MessageForm__Form__FormContents
-        %input.ChatMain__MessageForm__Form__FormContents__text{placeholder: "type a message"}
-        %label.ChatMain__MessageForm__Form__FormContents__image{for: "form-image"}
+  .MessageForm
+    %form.MessageForm__Form
+      .MessageForm__Form__FormContents
+        %input.MessageForm__Form__FormContents__text{placeholder: "type a message"}
+        %label.MessageForm__Form__FormContents__image{for: "form-image"}
           %i.far.fa-image
           %input.Hidden#form-image{type: "file"}
-      %input.ChatMain__MessageForm__Form__send{type: "submit",value: "Send"}
+      %input.MessageForm__Form__send{type: "submit",value: "Send"}
