@@ -8,8 +8,10 @@
   width: calc(100vw - 300px);
   .GroupInfo{
     height: 100px;
-    margin: 0 40px;
+    padding: 0 40px;
     display: flex;
+    color: #fff;
+    border-bottom: 1px solid #eee;
     justify-content: space-between;
     &__Group{
       margin-top: 35px;
