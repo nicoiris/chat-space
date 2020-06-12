@@ -5,8 +5,7 @@
         %p グループ名
       .GroupInfo__Group__member
         %p Member :
-    %a.GroupInfo__button{href: "#"}
-      Edit
+    = link_to "Edit", "#", class: "GroupInfo__button"
   .MessageList
     .MessageList__MessageBox
       .MessageList__MessageBox__MessageInfo
