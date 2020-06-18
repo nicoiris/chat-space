@@ -5,29 +5,16 @@
         = current_user.name
       %ul.UserName__TopItems__Icons
         %li.UserName__TopItems__Icons__icon
-          = link_to "#" do
+          = link_to new_group_path do
             %i.fas.fa-edit
         %li.UserName__TopItems__Icons__icon
           = link_to edit_user_path(current_user) do
             %i.fas.fa-cog
   .GroupList
-    .GroupList__Group
-      .GroupList__Group__name
-        %p グループ名
-      .GroupList__Group__message
-        %p メッセージ
-    .GroupList__Group
-      .GroupList__Group__name
-        %p グループ名
-      .GroupList__Group__message
-        %p メッセージ
-    .GroupList__Group
-      .GroupList__Group__name
-        %p グループ名
-      .GroupList__Group__message
-        %p メッセージ
-    .GroupList__Group
-      .GroupList__Group__name
-        %p グループ名
-      .GroupList__Group__message
-        %p メッセージ
+    - current_user.groups.each do |group|
+      .GroupList__Group
+        = link_to '#' do
+          .GroupList__Group__name
+            = group.name
+          .GroupList__Group__message
+            メッセージはまだありません
