@@ -2,48 +2,20 @@
   .GroupInfo
     .GroupInfo__Group
       .GroupInfo__Group__name
-        %p グループ名
+        = @group.name
       .GroupInfo__Group__member
-        %p Member :
-    = link_to "Edit", "#", class: "GroupInfo__button"
+        %span Member : 
+        - @group.users.each do |user|
+          %span
+            = user.name
+    = link_to "Edit", "edit", class: "GroupInfo__button"
   .MessageList
-    .MessageList__MessageBox
-      .MessageList__MessageBox__MessageInfo
-        .MessageList__MessageBox__MessageInfo__name
-          %p ユーザー名
-        .MessageList__MessageBox__MessageInfo__date
-          %p 2020年06月04日 20時30分
-      .MessageList__MessageBox__message
-        %p ここにメッセージが入ります
-    .MessageList__MessageBox
-      .MessageList__MessageBox__MessageInfo
-        .MessageList__MessageBox__MessageInfo__name
-          %p ユーザー名
-        .MessageList__MessageBox__MessageInfo__date
-          %p 2020年06月04日 20時30分
-      .MessageList__MessageBox__message
-        %p ここにメッセージが入ります
-    .MessageList__MessageBox
-      .MessageList__MessageBox__MessageInfo
-        .MessageList__MessageBox__MessageInfo__name
-          %p ユーザー名
-        .MessageList__MessageBox__MessageInfo__date
-          %p 2020年06月04日 20時30分
-      .MessageList__MessageBox__message
-        %p ここにメッセージが入ります
-    .MessageList__MessageBox
-      .MessageList__MessageBox__MessageInfo
-        .MessageList__MessageBox__MessageInfo__name
-          %p ユーザー名
-        .MessageList__MessageBox__MessageInfo__date
-          %p 2020年06月04日 20時30分
-      .MessageList__MessageBox__message
-        %p ここにメッセージが入ります
+    = render @messages
   .MessageForm
-    %form.MessageForm__Form
+    = form_with model: [@group, @message], html: {class: "MessageForm__Form"}, local: true do |f|
       .MessageForm__Form__FormContents
-        %input.MessageForm__Form__FormContents__text{placeholder: "type a message"}
-        %label.MessageForm__Form__FormContents__image{for: "form-image"}
-          %i.far.fa-image
-          %input.Hidden#form-image{type: "file"}
-      %input.MessageForm__Form__send{type: "submit",value: "Send"}
+        = f.text_field :body, class: "MessageForm__Form__FormContents__text", placeholder: "type a message"
+        = f.label :image, class: "MessageForm__Form__FormContents__image" do
+          = icon("far", "image")
+          = f.file_field :image, class: "Hidden"
+      = f.submit "Send", class: "MessageForm__Form__send"
