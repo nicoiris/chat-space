@@ -52,6 +52,9 @@
       &__message{
         font-size: 14px;
         color: $main-message-color;
+        &__image{
+          height: 300px;
+        }
       }
     }
   }

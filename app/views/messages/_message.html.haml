@@ -5,6 +5,5 @@
     .MessageList__MessageBox__MessageInfo__date
       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .MessageList__MessageBox__message
-    - if message.body.present?
-      = message.body
-    = image_tag message.image.url if message.image.present?
+    = simple_format message.body, class: "MessageList__MessageBox__message__body" if message.body.present?
+    = image_tag message.image.url, class: "MessageList__MessageBox__message__image" if message.image.present?
