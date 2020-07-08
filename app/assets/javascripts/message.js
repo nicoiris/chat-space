@@ -63,6 +63,6 @@ $(function(){
     })
     .always(function(){
       $('.MessageForm__Form__send').prop('disabled', false);
-    })
+    });
   })
 })
